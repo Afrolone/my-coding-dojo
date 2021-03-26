@@ -5,16 +5,20 @@ arr3 = [0];
 arr4 = [];
 arr5 = [-9, 2, -1, 5, 15, 65, -73, 12, 52];
 
-console.log(findLargest(arr1));
-console.log(findLargest(arr2));
-console.log(findLargest(arr3));
-console.log(findLargest(arr4));
-console.log(findLargest(arr5));
+
+console.log(findLargest(arr1)); // 33
+console.log(findLargest(arr2)); // 73
+console.log(findLargest(arr3)); // 0
+console.log(findLargest(arr4)); // undefined
+console.log(findLargest(arr5)); // 65 
+
 
 function findLargest(numbers) {
     var len = numbers.length;
 
-    if (len === 0 || len === null) {
+    console.log(len)
+
+    if (len === 0) {
         return;
     }
 
