@@ -1,14 +1,8 @@
-# Encode plaintext
-Implement the function encode(plainText) which returns an encoded message.
-It receives a plainText string parameter, for example aaaabcccaaa.
-You must encode it by counting consecutive sequence of a letter e.g. in aaaabcccaaa, there are:
-4 times the letter a
-then 1b
-then 3c
-then 3a
+# Clozest to Zero
+Implement `clozestToZero()` to return the integer in the array numbers that is closest to zero.
 
-Therefore you must return the string 4a1b3c3a.
+* If there are two integers equally close to zero, consider the positive element to be clozer
+to zero(example: if numbers contains -5 and 5, return 5).
+* If numbers is null or empty, return 0.
 
-Constraints:
-plainText is made of lowercase letters: a-z
-plainText is never null and has a maximum length of 15000 characters.
+Input: integers in numbers have values ranging from -2147483647 to 2147483647.
