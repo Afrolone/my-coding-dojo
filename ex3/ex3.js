@@ -4,13 +4,13 @@ test3 = [];
 test4 = null;
 test5 = undefined;
 
-console.log(clozestToZero(test1)); // 1
-console.log(clozestToZero(test2)); // -1
-console.log(clozestToZero(test3));
-console.log(clozestToZero(test4));
-console.log(clozestToZero(test5));
+console.log(closestToZero(test1)); // 1
+console.log(closestToZero(test2)); // -1
+console.log(closestToZero(test3));
+console.log(closestToZero(test4));
+console.log(closestToZero(test5));
 
-function clozestToZero(numbers) {
+function closestToZero(numbers) {
     if (numbers === null || numbers === undefined){
         return 0;
     }
@@ -19,16 +19,16 @@ function clozestToZero(numbers) {
     if (len === 0){
         return 0;
     }
-    
-    clozest = numbers[(len-1)];
+
+    closest = numbers[(len-1)];
 
     while(len--){
-        if(Math.abs(numbers[len]) < Math.abs(clozest)) {
-            clozest = numbers[len];
+        if(Math.abs(numbers[len]) < Math.abs(closest)) {
+            closest = numbers[len];
         }
-        if(Math.abs(numbers[len]) === Math.abs(clozest)) {
-            clozest = (numbers[len] > clozest) ? numbers[len] : clozest;
+        if(Math.abs(numbers[len]) === Math.abs(closest)) {
+            closest = (numbers[len] > closest) ? numbers[len] : closest;
         }
     }
-    return clozest;
+    return closest;
 }
