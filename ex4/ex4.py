@@ -1,12 +1,10 @@
-# public static int[] reversed (int k, int[] arr)
-
 def reversed(k, arr):
     def revone(ar):
         ar.insert(0, ar.pop())
         return ar
 
     if (k < 0):
-        return 0
+        return arr
     
     if (k == 0 or k % len(arr) == 0):
         return arr
@@ -22,4 +20,8 @@ def reversed(k, arr):
     return arr
 
 somearr = [0, 1, 2, 3]
+somearr1 = [4,7,2]
+somearr2 = [1,2,3]
 print(reversed(11, somearr))
+print(reversed(0, somearr1))
+print(reversed(2, somearr2))

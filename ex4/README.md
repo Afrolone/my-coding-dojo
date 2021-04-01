@@ -1,5 +1,5 @@
 # Array reverse
-Write `reversed(k, arr)` that reverses an array for k places.
+Write `reversed(arr, k)` that reverses an array for k places.
 
 Both k and arr are of type integer.
 
