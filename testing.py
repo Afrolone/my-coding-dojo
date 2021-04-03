@@ -47,10 +47,10 @@ class Testing(unittest.TestCase):
             [],
             None
         ]
-        results = []
+        nums = []
         for value in values:
-            results.append(encode(closestToZero(value)))
-        self.assertEqual(results, [
+            nums.append(closestToZero(value))
+        self.assertEqual(nums, [
             1,
             -1,
             0,
