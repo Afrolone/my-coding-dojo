@@ -1,6 +1,7 @@
 import unittest
 from ex1.ex1 import findLargest
 from ex2.ex2 import encode
+from ex3.ex3 import closestToZero
 
 class Testing(unittest.TestCase):
 
@@ -36,7 +37,25 @@ class Testing(unittest.TestCase):
             "a4b3c3d2e3a3x3",
             "c4x2e6y2t2m3h2l1o1p2d2t1y1",
             "p5r2s2r1t3u1v1b3k3o2l4y1t2"
-        ])  
+        ]) 
+
+    def test_closestToZero(self):
+
+        values = [
+            [1,2,3,4,5,6,7,8,9, -1, -2, -3, -4, -5, -6, -7, -8, -9],
+            [-3,7,5,-4,-8,-4,-2,5,6,-1,43,-3,-2],
+            [],
+            None
+        ]
+        results = []
+        for value in values:
+            results.append(encode(closestToZero(value)))
+        self.assertEqual(results, [
+            1,
+            -1,
+            0,
+            0
+        ]) 
 
 if __name__ == '__main__':
         unittest.main()
