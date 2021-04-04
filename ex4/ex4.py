@@ -18,10 +18,3 @@ def reversed(k, arr):
         arr = revone(arr)
     
     return arr
-
-somearr = [0, 1, 2, 3]
-somearr1 = [4,7,2]
-somearr2 = [1,2,3]
-print(reversed(11, somearr))
-print(reversed(0, somearr1))
-print(reversed(2, somearr2))

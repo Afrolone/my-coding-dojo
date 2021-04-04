@@ -2,6 +2,9 @@ import unittest
 from ex1.ex1 import findLargest
 from ex2.ex2 import encode
 from ex3.ex3 import closestToZero
+from ex4.ex4 import reversed
+from ex5.ex5 import reversePalindrome
+
 
 class Testing(unittest.TestCase):
 
@@ -56,6 +59,48 @@ class Testing(unittest.TestCase):
             0,
             0
         ]) 
+
+    def test_reversed(self):
+
+        arrs = [
+            [0, 1, 2, 3],
+            [4,7,2],
+            [1,2,3],
+        ]
+
+        arrargs = [
+            2,
+            0,
+            11
+        ]
+
+        resarrs = []
+
+        for ar in arrs:
+            resarrs.append(reversed(arrargs.pop(), ar))
+        
+        self.assertEqual(resarrs, [
+            [1, 2, 3, 0],
+            [4, 7, 2],
+            [2, 3, 1]
+        ])
+
+    def test_reversePalindrome(self):
+
+        sents = [
+            "mom and dad went to eye hospital",
+            "wow it is next level"
+        ]
+
+        resultSents = []
+
+        for sent in sents:
+            resultSents.append(reversePalindrome(sent))
+        
+        self.assertEqual(resultSents, [
+            "eye and dad went to mom hospital",
+            "level it is next wow"
+        ])
 
 if __name__ == '__main__':
         unittest.main()
